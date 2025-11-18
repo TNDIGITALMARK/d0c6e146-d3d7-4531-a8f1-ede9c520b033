@@ -1,0 +1,45 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Decorative Legal Scales Illustration for Hero Section -->
+
+  <!-- Left scale with connecting lines -->
+  <g opacity="0.8">
+    <!-- Left scale base -->
+    <circle cx="120" cy="220" r="40" stroke="#3B82F6" stroke-width="2" fill="none"/>
+    <line x1="120" y1="180" x2="120" y2="120" stroke="#3B82F6" stroke-width="2"/>
+
+    <!-- Connection dots -->
+    <circle cx="120" cy="120" r="4" fill="#3B82F6"/>
+    <circle cx="200" cy="80" r="4" fill="#3B82F6"/>
+    <circle cx="280" cy="120" r="4" fill="#3B82F6"/>
+
+    <!-- Connecting lines -->
+    <line x1="120" y1="120" x2="200" y2="80" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+    <line x1="200" y1="80" x2="280" y2="120" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+  </g>
+
+  <!-- Right scale with connecting lines -->
+  <g opacity="0.8">
+    <!-- Right scale base -->
+    <circle cx="280" cy="220" r="40" stroke="#3B82F6" stroke-width="2" fill="none"/>
+    <line x1="280" y1="180" x2="280" y2="120" stroke="#3B82F6" stroke-width="2"/>
+
+    <!-- Connection to center -->
+    <line x1="280" y1="120" x2="200" y2="80" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+  </g>
+
+  <!-- Balance beam -->
+  <line x1="120" y1="120" x2="280" y2="120" stroke="#3B82F6" stroke-width="2"/>
+
+  <!-- Center post -->
+  <line x1="200" y1="120" x2="200" y2="50" stroke="#3B82F6" stroke-width="2"/>
+  <circle cx="200" cy="50" r="6" fill="#3B82F6"/>
+
+  <!-- Decorative connecting nodes -->
+  <circle cx="160" cy="100" r="3" fill="#3B82F6" opacity="0.5"/>
+  <circle cx="240" cy="100" r="3" fill="#3B82F6" opacity="0.5"/>
+  <circle cx="200" cy="150" r="3" fill="#3B82F6" opacity="0.5"/>
+
+  <!-- Additional connecting lines for network effect -->
+  <line x1="160" y1="100" x2="200" y2="80" stroke="#3B82F6" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+  <line x1="240" y1="100" x2="200" y2="80" stroke="#3B82F6" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+</svg>

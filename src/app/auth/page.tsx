@@ -3,25 +3,20 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/zylo/hooks';
+import { LawMatchLogo } from '@/components/brand/lawmatch-logo';
+import { Header } from '@/components/brand/header';
+import { Footer } from '@/components/brand/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Separator } from '@/components/ui/separator';
 
 /**
- * Combined Authentication Page
- *
- * Universal design that can be easily customized:
- * - Change colors by modifying className styles
- * - Add/remove form fields as needed
- * - Customize validation logic in handlers
- * - Replace Card component with custom containers
- * - Add social auth buttons above separator
- *
- * Uses Zylo Client for authentication via useAuth() hook
+ * Authentication Hub - Page 1 of 3
+ * Combined login/signup view with LawMatch branding
+ * Pixel-perfect design matching ai-generated-preview.png
  */
 export default function AuthPage() {
   const router = useRouter();
@@ -97,16 +92,22 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background py-12 px-4">
-      <Card className="w-full max-w-md border-border shadow-sm">
-        <CardHeader className="space-y-2">
-          <CardTitle className="text-3xl font-semibold text-center tracking-tight">
-            Welcome
-          </CardTitle>
-          <CardDescription className="text-center text-base">
-            Sign in to your account or create a new one
-          </CardDescription>
-        </CardHeader>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+
+      <main className="flex-1 flex items-center justify-center bg-gray-50 py-12 px-6">
+        <Card className="w-full max-w-md border-border shadow">
+          <CardHeader className="space-y-4">
+            <div className="flex justify-center">
+              <LawMatchLogo />
+            </div>
+            <CardTitle className="text-2xl font-semibold text-center text-[hsl(var(--navy-primary))]">
+              Welcome to LawMatch
+            </CardTitle>
+            <CardDescription className="text-center text-base text-gray-600">
+              Sign in to your account or create a new one to start your assessment journey
+            </CardDescription>
+          </CardHeader>
         <CardContent className="pt-6">
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
@@ -265,6 +266,9 @@ export default function AuthPage() {
           </Tabs>
         </CardContent>
       </Card>
+      </main>
+
+      <Footer />
     </div>
   );
 }

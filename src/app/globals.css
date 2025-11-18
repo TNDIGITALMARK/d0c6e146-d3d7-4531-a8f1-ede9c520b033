@@ -1,59 +1,70 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* =============================================================================
+LAWMATCH/ZYLO DESIGN SYSTEM - Pixel-Perfect Replication
+Based on ai-generated-preview.png design reference
+============================================================================= */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* LawMatch Primary Colors (HSL format required by shadcn) */
+  /* Primary Navy: #2C4359 = hsl(208, 36%, 26%) */
+  --background: 210 20% 98%;
+  --foreground: 208 36% 26%;
 
-  /* Clean white cards with black text */
+  /* Card backgrounds - Pure white */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  --card-foreground: 208 36% 26%;
 
-  /* Popovers with white background */
+  /* Popovers - White background */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --popover-foreground: 208 36% 26%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
+  /* Primary: Accent Blue #3B82F6 = hsl(217, 91%, 60%) */
+  --primary: 217 91% 60%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Light backgrounds */
+  --secondary: 210 20% 98%;
+  --secondary-foreground: 208 36% 26%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Medium gray tones */
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent: Blue accent color */
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Clean red */
-  --destructive: 0 70% 50%;
+  /* Destructive: Error red */
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
   /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 217 91% 60%;
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border radius matching design */
+  --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
+  /* Sidebar colors */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  --sidebar-foreground: 208 36% 26%;
+  --sidebar-primary: 208 36% 26%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-accent: 210 20% 98%;
+  --sidebar-accent-foreground: 208 36% 26%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217 91% 60%;
+
+  /* Custom LawMatch Design System Colors */
+  --navy-primary: 208 36% 26%;        /* #2C4359 */
+  --navy-dark: 214 35% 18%;           /* #1E2B3C */
+  --blue-accent: 217 91% 60%;         /* #3B82F6 */
+  --blue-cta: 212 54% 24%;            /* #1E3A5F */
+  --gray-light: 210 20% 98%;          /* #F9FAFB */
+  --gray-medium: 220 9% 46%;          /* #6B7280 */
 }
 
 .dark {
@@ -168,6 +179,16 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* =============================================================================
+GLOBAL TYPOGRAPHY & BASE STYLES
+============================================================================= */
+
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -175,29 +196,137 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Minimal, clean typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+/* Heading Styles - Matching Design Reference */
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.025em;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+h5, h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph and Text Styles */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
   color: hsl(var(--foreground));
 }
 
-/* Clean button styles */
-button {
-  font-weight: 500;
+.text-large {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-/* Subtle shadows for depth */
+.text-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Link Styles */
+a {
+  color: hsl(var(--blue-accent));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(217 91% 50%);
+}
+
+/* Button Base Styles */
+button {
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+/* Form Element Defaults */
+input,
+textarea,
+select {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+}
+
+/* Card Shadow Styles - Matching Design Reference */
 .shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover Effects for Cards */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile Typography Adjustments */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }

@@ -1,0 +1,19 @@
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scales Icon -->
+  <g transform="translate(0, 4)">
+    <!-- Left scale -->
+    <circle cx="6" cy="18" r="4" stroke="#2C4359" stroke-width="1.5" fill="none"/>
+    <line x1="6" y1="14" x2="6" y2="8" stroke="#2C4359" stroke-width="1.5"/>
+    <!-- Right scale -->
+    <circle cx="18" cy="18" r="4" stroke="#2C4359" stroke-width="1.5" fill="none"/>
+    <line x1="18" y1="14" x2="18" y2="8" stroke="#2C4359" stroke-width="1.5"/>
+    <!-- Balance beam -->
+    <line x1="6" y1="8" x2="18" y2="8" stroke="#2C4359" stroke-width="1.5"/>
+    <!-- Center post -->
+    <line x1="12" y1="8" x2="12" y2="2" stroke="#2C4359" stroke-width="1.5"/>
+    <circle cx="12" cy="2" r="1.5" fill="#2C4359"/>
+  </g>
+
+  <!-- LawMatch Text -->
+  <text x="36" y="21" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#2C4359">LawMatch</text>
+</svg>
