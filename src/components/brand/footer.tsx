@@ -1,19 +1,19 @@
-import { LawMatchLogo } from './lawmatch-logo';
+import { LawWorkLogo } from './lawwork-logo';
 import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-[hsl(var(--navy-dark))] text-white py-12 px-6">
+    <footer className="bg-gray-900 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <LawMatchLogo className="[&_svg]:text-white [&_span]:text-white" href="/" />
+              <LawWorkLogo />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Intelligent legal matching for modern professionals.
-              Streamline your assessment and matching process.
+              Connect with top legal talent through our intelligent matching platform.
+              Simplified staffing for modern law firms.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export function Footer() {
                   <rect x="2" y="4" width="20" height="16" rx="2" />
                   <path d="M22 4L12 13L2 4" />
                 </svg>
-                <span>info@lawmatch.com</span>
+                <span>info@lawwork.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -68,7 +68,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-6 text-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} LawMatch. All rights reserved.
+            © {new Date().getFullYear()} LawWork. All rights reserved.
           </p>
         </div>
       </div>

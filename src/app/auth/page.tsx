@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/zylo/hooks';
-import { LawMatchLogo } from '@/components/brand/lawmatch-logo';
+import { LawWorkLogo } from '@/components/brand/lawwork-logo';
 import { Header } from '@/components/brand/header';
 import { Footer } from '@/components/brand/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,9 +14,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 /**
- * Authentication Hub - Page 1 of 3
- * Combined login/signup view with LawMatch branding
- * Pixel-perfect design matching ai-generated-preview.png
+ * Authentication Hub
+ * Combined login/signup view with LawWork branding
  */
 export default function AuthPage() {
   const router = useRouter();
@@ -96,13 +95,13 @@ export default function AuthPage() {
       <Header />
 
       <main className="flex-1 flex items-center justify-center bg-gray-50 py-12 px-6">
-        <Card className="w-full max-w-md border-border shadow">
+        <Card className="w-full max-w-md border-border shadow-xl">
           <CardHeader className="space-y-4">
             <div className="flex justify-center">
-              <LawMatchLogo />
+              <LawWorkLogo />
             </div>
-            <CardTitle className="text-2xl font-semibold text-center text-[hsl(var(--navy-primary))]">
-              Welcome to LawMatch
+            <CardTitle className="text-2xl font-semibold text-center text-gray-900">
+              Welcome to LawWork
             </CardTitle>
             <CardDescription className="text-center text-base text-gray-600">
               Sign in to your account or create a new one to start your assessment journey

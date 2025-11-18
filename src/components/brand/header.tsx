@@ -1,6 +1,6 @@
 'use client';
 
-import { LawMatchLogo } from './lawmatch-logo';
+import { LawWorkLogo } from './lawwork-logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Assessments', href: '/assessment' },
   { name: 'Profile', href: '/profile' },
-  { name: 'About Us', href: '/about' },
+  { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -16,11 +16,13 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-[#1D7AFC] sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <LawMatchLogo href="/" />
+          <Link href="/">
+            <LawWorkLogo />
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -30,8 +32,8 @@ export function Header() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'text-[hsl(var(--navy-primary))]'
-                    : 'text-gray-600 hover:text-[hsl(var(--navy-primary))]'
+                    ? 'text-white'
+                    : 'text-blue-100 hover:text-white'
                 }`}
               >
                 {item.name}
@@ -43,9 +45,9 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/auth"
-              className="px-5 py-2.5 bg-[hsl(var(--blue-cta))] text-white text-sm font-medium rounded-md hover:bg-[hsl(212,54%,20%)] transition-colors"
+              className="px-6 py-2.5 bg-white text-[#1D7AFC] text-sm font-semibold rounded-lg hover:bg-gray-50 transition-colors"
             >
-              Login/Signup
+              Sign In
             </Link>
           </div>
         </div>
